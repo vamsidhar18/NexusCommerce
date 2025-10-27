@@ -2,6 +2,9 @@
 
 A high-performance, distributed e-commerce platform built with Spring Boot microservices, designed to handle 50K+ concurrent users with sub-200ms response times.
 
+## Live Demo link
+- https://vamsidhar18.github.io/NexusCommerce/#/dashboard
+
 ## 🏗️ Architecture Overview
 
 - **Microservices**: 6 core services (User, Product, Order, Payment, Inventory, Notification)

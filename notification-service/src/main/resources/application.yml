@@ -1,0 +1,14 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: notification-service
+  config:
+    import: "configserver:http://${CONFIG_SERVER_URL:localhost:8888}"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

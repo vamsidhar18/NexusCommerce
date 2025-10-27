@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: product-service
+  config:
+    import: "configserver:http://${CONFIG_SERVER_URL:localhost:8888}"
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000 # 10 minutes
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

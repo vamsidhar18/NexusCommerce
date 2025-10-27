@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusCommerce - Redirecting to Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 { margin-bottom: 1rem; }
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .note {
+            margin-top: 1rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        // Redirect to dashboard after 2 seconds
+        setTimeout(() => {
+            window.location.href = 'https://vamsidhar18.github.io/NexusCommerce/';
+        }, 2000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 NexusCommerce</h1>
+        <p>Enterprise Microservices E-Commerce Platform</p>
+        <div class="spinner"></div>
+        <p>Redirecting to Admin Dashboard...</p>
+        <div class="note">
+            <p><strong>Demo Credentials:</strong></p>
+            <p>admin/admin123 • demo/demo123 • guest/guest123</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Scalable Microservices-Based E-Commerce Platform
+# Scalable Microservices-Based E-Commerce Platform (NexusCommerce)
 
 A high-performance, distributed e-commerce platform built with Spring Boot microservices, designed to handle 50K+ concurrent users with sub-200ms response times.
 

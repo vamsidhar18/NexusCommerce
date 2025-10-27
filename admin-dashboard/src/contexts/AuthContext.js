@@ -33,16 +33,26 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (credentials) => {
     try {
-      // Simulate API call - in real app this would call the backend
-      if (credentials.identifier === 'admin' && credentials.password === 'admin123') {
-        const mockToken = 'mock-jwt-token-' + Date.now();
+      // Demo mode - accepts multiple demo credentials
+      const validCredentials = [
+        { user: 'admin', pass: 'admin123', role: 'ADMIN' },
+        { user: 'demo', pass: 'demo123', role: 'ADMIN' },
+        { user: 'guest', pass: 'guest123', role: 'ADMIN' }
+      ];
+      
+      const validLogin = validCredentials.find(cred => 
+        credentials.identifier === cred.user && credentials.password === cred.pass
+      );
+      
+      if (validLogin) {
+        const mockToken = 'demo-jwt-token-' + Date.now();
         const mockUser = {
           id: '1',
-          username: 'admin',
-          email: 'admin@ecommerce.com',
-          firstName: 'Admin',
+          username: validLogin.user,
+          email: `${validLogin.user}@nexuscommerce.demo`,
+          firstName: validLogin.user.charAt(0).toUpperCase() + validLogin.user.slice(1),
           lastName: 'User',
-          role: 'ADMIN'
+          role: validLogin.role
         };
         
         localStorage.setItem('token', mockToken);
@@ -53,7 +63,7 @@ export const AuthProvider = ({ children }) => {
       } else {
         return { 
           success: false, 
-          error: 'Invalid credentials' 
+          error: 'Invalid credentials. Try: admin/admin123, demo/demo123, or guest/guest123' 
         };
       }
     } catch (error) {

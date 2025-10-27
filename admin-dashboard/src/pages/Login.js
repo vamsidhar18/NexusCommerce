@@ -128,9 +128,12 @@ const Login = () => {
 
             <Box sx={{ mt: 2, p: 2, bgcolor: 'grey.100', borderRadius: 1, width: '100%' }}>
               <Typography variant="caption" color="textSecondary">
-                <strong>Demo Credentials:</strong><br />
-                Username: admin<br />
-                Password: admin123
+                <strong>🎯 Live Demo Credentials:</strong><br />
+                • admin / admin123<br />
+                • demo / demo123<br />
+                • guest / guest123<br />
+                <br />
+                <strong>🚀 Full Platform:</strong> Clone & run locally
               </Typography>
             </Box>
           </Box>

@@ -2,8 +2,9 @@ name: Deploy Admin Dashboard to GitHub Pages
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
+  # Disabled auto-deploy on push - use manual deployment script instead
+  # push:
+  #   branches: [ main ]
 
 jobs:
   deploy:

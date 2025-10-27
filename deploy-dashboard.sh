@@ -11,7 +11,7 @@ npm install
 
 # Build for production
 echo "🔨 Building dashboard..."
-PUBLIC_URL=/NexusCommerce npm run build
+npm run build
 
 # Create gh-pages branch and deploy
 echo "🌐 Deploying to GitHub Pages..."
